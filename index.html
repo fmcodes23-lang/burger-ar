@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <title>Burger AR</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffffff;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
 </head>
-<body style="margin:0;">
+<body>
 
 <model-viewer 
   src="burger.glb"
   ar
-  ar-modes="webxr scene-viewer quick-look"
+  ar-modes="scene-viewer webxr quick-look"
   camera-controls
   auto-rotate
   shadow-intensity="1"
   exposure="1"
-  style="width:100%; height:100vh;">
+  environment-image="neutral"
+  ios-src="burger.glb">
 </model-viewer>
 
 </body>
