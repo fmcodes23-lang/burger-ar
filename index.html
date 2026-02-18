@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Burger AR</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      background-color: #ffffff;
-    }
-    model-viewer {
-      width: 100vw;
-      height: 100vh;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Burger AR</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>
+body { margin:0; }
+model-viewer { width:100vw; height:100vh; }
+</style>
 </head>
 <body>
 
-<model-viewer 
+<model-viewer
   src="burger.glb"
+  ios-src="burger.usdz"
   ar
-  ar-modes="scene-viewer webxr quick-look"
+  ar-modes="quick-look"
   camera-controls
-  auto-rotate
-  shadow-intensity="1"
-  exposure="1"
-  environment-image="neutral"
-  ios-src="burger.glb">
+  auto-rotate>
 </model-viewer>
 
 </body>
